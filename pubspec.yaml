@@ -77,6 +77,8 @@ flutter:
     - family: Merriweather
       fonts:
         - asset: fonts/Merriweather-Bold.ttf
+        - asset: fonts/Merriweather-Regular.ttf
+
        
          
   #   - family: Trajan Pro

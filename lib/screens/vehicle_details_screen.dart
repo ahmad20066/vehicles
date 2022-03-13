@@ -31,6 +31,7 @@ class VehicleDetailsScreen extends StatelessWidget {
                   year: vehicles[index].year,
                   price: vehicles[index].price,
                   capacity: vehicles[index].engineCapacity,
+                  id: vehicles[index].id,
                 );
               })
           : Center(

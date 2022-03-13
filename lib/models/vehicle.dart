@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class VehicleModel {
   String id;
   String categoryTitle;
@@ -6,6 +8,8 @@ class VehicleModel {
   int year;
   double price;
   double engineCapacity;
+  Color color;
+  bool isFullOption;
   String? description;
   VehicleModel(
       {required this.id,
@@ -15,5 +19,7 @@ class VehicleModel {
       required this.engineCapacity,
       required this.price,
       required this.year,
+      required this.color,
+      required this.isFullOption,
       this.description});
 }

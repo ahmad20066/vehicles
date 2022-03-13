@@ -9,18 +9,20 @@ class VehicleWidget extends StatelessWidget {
   int year;
   double capacity;
   double price;
+  String id;
   VehicleWidget(
       {required this.imageUrl,
       required this.title,
       required this.year,
       required this.capacity,
-      required this.price});
+      required this.price,
+      required this.id});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, DetailsScreen.routeName);
+        Navigator.pushNamed(context, DetailsScreen.routeName, arguments: id);
       },
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
