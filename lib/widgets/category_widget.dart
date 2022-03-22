@@ -23,6 +23,12 @@ class Categorywidget extends StatelessWidget {
         margin: EdgeInsets.all(8),
         alignment: Alignment.center,
         decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                  color: color.withOpacity(0.6),
+                  blurRadius: 4,
+                  offset: Offset(5, 15))
+            ],
             borderRadius: BorderRadius.circular(30),
             gradient: LinearGradient(
                 begin: Alignment.topLeft,

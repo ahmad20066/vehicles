@@ -1,5 +1,6 @@
 import 'package:cars2/screens/details_screen.dart';
 import 'package:cars2/screens/home_screen.dart';
+import 'package:cars2/screens/tab_screen.dart';
 import 'package:cars2/screens/vehicle_details_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Merriweather',
           primarySwatch: Colors.pink,
           scaffoldBackgroundColor: Colors.orange[100]),
-      home: HomeScreen(),
+      home: TabScreen(),
       routes: {
         VehicleDetailsScreen.routeName: (context) => VehicleDetailsScreen(),
         DetailsScreen.routeName: (context) => DetailsScreen()

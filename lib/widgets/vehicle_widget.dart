@@ -25,6 +25,7 @@ class VehicleWidget extends StatelessWidget {
         Navigator.pushNamed(context, DetailsScreen.routeName, arguments: id);
       },
       child: Card(
+        elevation: 50,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         child: Column(
           children: [

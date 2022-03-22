@@ -10,12 +10,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Vehicles",
-          style: TextStyle(fontFamily: 'Merriweather'),
-        ),
-      ),
       body: GridView.builder(
         itemCount: categories.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
