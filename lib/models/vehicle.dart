@@ -11,6 +11,7 @@ class VehicleModel {
   Color color;
   bool isFullOption;
   String? description;
+  bool isFav;
   VehicleModel(
       {required this.id,
       required this.categoryTitle,
@@ -21,5 +22,6 @@ class VehicleModel {
       required this.year,
       required this.color,
       required this.isFullOption,
-      this.description});
+      this.description,
+      this.isFav = false});
 }

@@ -14,6 +14,12 @@ class DetailsScreen extends StatelessWidget {
       return vehicle.id == id;
     });
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          vehicle.isFav = !vehicle.isFav;
+          print(vehicle.isFav);
+        },
+      ),
       appBar: AppBar(
         title: Text(vehicle.title),
       ),
