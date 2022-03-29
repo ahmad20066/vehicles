@@ -12,16 +12,18 @@ class VehicleModel {
   bool isFullOption;
   String? description;
   bool isFav;
-  VehicleModel(
-      {required this.id,
-      required this.categoryTitle,
-      required this.title,
-      required this.ImageUrl,
-      required this.engineCapacity,
-      required this.price,
-      required this.year,
-      required this.color,
-      required this.isFullOption,
-      this.description,
-      this.isFav = false});
+
+  VehicleModel({
+    required this.id,
+    required this.categoryTitle,
+    required this.title,
+    required this.ImageUrl,
+    required this.engineCapacity,
+    required this.price,
+    required this.year,
+    required this.color,
+    required this.isFullOption,
+    this.description,
+    this.isFav = false,
+  });
 }

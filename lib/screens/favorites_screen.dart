@@ -6,21 +6,20 @@ import 'package:flutter/material.dart';
 class FavoritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final List<VehicleModel> vehicles =
+    final List<VehicleModel> favVehicles =
         DummyData.dummyVehicles.where((element) => element.isFav).toList();
     return Scaffold(
       body: ListView.builder(
-          //shrinkWrap: true,
-          itemCount: vehicles.length,
-          itemBuilder: ((context, index) {
+          itemCount: favVehicles.length,
+          itemBuilder: (context, index) {
             return VehicleWidget(
-                imageUrl: vehicles[index].ImageUrl,
-                title: vehicles[index].title,
-                year: vehicles[index].year,
-                capacity: vehicles[index].engineCapacity,
-                price: vehicles[index].price,
-                id: vehicles[index].id);
-          })),
+                imageUrl: favVehicles[index].ImageUrl,
+                title: favVehicles[index].title,
+                year: favVehicles[index].year,
+                capacity: favVehicles[index].engineCapacity,
+                price: favVehicles[index].price,
+                id: favVehicles[index].id);
+          }),
     );
   }
 }

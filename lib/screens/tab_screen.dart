@@ -2,6 +2,7 @@
 
 import 'package:cars2/screens/favorites_screen.dart';
 import 'package:cars2/screens/home_screen.dart';
+import 'package:cars2/widgets/mydrawer.dart';
 import 'package:flutter/material.dart';
 
 class TabScreen extends StatefulWidget {
@@ -23,6 +24,7 @@ class _TabScreenState extends State<TabScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MyDrawer(),
       appBar: AppBar(
         title: Text(pages[selectedIndex]['title']),
       ),

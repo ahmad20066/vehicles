@@ -25,9 +25,9 @@ class Categorywidget extends StatelessWidget {
         decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                  color: color.withOpacity(0.6),
-                  blurRadius: 4,
-                  offset: Offset(5, 15))
+                color: color.withOpacity(0.6),
+                blurRadius: 4,
+              )
             ],
             borderRadius: BorderRadius.circular(30),
             gradient: LinearGradient(

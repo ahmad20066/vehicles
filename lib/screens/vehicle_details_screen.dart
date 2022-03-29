@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 
 class VehicleDetailsScreen extends StatelessWidget {
   static const routeName = '/Details';
+  final List<VehicleModel> displayedVehicles;
+  VehicleDetailsScreen(this.displayedVehicles);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class VehicleDetailsScreen extends StatelessWidget {
     final category = DummyData.dummyCategories.firstWhere((category) {
       return category.id == id;
     });
-    List<VehicleModel> vehicles = DummyData.dummyVehicles
+    List<VehicleModel> vehicles = displayedVehicles
         .where((element) => element.categoryTitle == category.title)
         .toList();
     return Scaffold(

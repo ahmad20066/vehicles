@@ -4,9 +4,14 @@ import 'package:cars2/dummy_data.dart';
 import 'package:cars2/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
-class DetailsScreen extends StatelessWidget {
+class DetailsScreen extends StatefulWidget {
   static const routeName = '/details';
 
+  @override
+  State<DetailsScreen> createState() => _DetailsScreenState();
+}
+
+class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
     final id = ModalRoute.of(context)!.settings.arguments as String;
@@ -16,9 +21,11 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          vehicle.isFav = !vehicle.isFav;
-          print(vehicle.isFav);
+          setState(() {
+            vehicle.isFav = !vehicle.isFav;
+          });
         },
+        child: Icon(vehicle.isFav ? Icons.star : Icons.star_border_outlined),
       ),
       appBar: AppBar(
         title: Text(vehicle.title),
